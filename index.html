@@ -7,7 +7,6 @@
 <title>Brawl Hub - Skin Kataloğu</title>
 
 <style>
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,16 +15,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background:
-        radial-gradient(circle at top, #303b70, #111522 60%);
+    background: radial-gradient(circle at top, #303b70, #111522 60%);
     color: white;
     min-height: 100vh;
 }
 
-/* HEADER */
-
 header {
-    background: rgba(10, 13, 25, .95);
+    background: rgba(10,13,25,.95);
     border-bottom: 3px solid #ffd21f;
     padding: 18px 6%;
     display: flex;
@@ -54,32 +50,28 @@ nav a:hover {
     color: #ffd21f;
 }
 
-/* HERO */
-
 .hero {
     text-align: center;
-    padding: 70px 20px 50px;
+    padding: 60px 20px 40px;
 }
 
 .hero h1 {
-    font-size: 58px;
+    font-size: 55px;
     color: #ffd21f;
     text-shadow: 5px 5px #000;
 }
 
 .hero p {
+    margin-top: 12px;
     color: #ddd;
-    font-size: 19px;
-    margin-top: 15px;
+    font-size: 18px;
 }
-
-/* CONTROLS */
 
 .controls {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    background: rgba(20,25,45,.9);
+    background: rgba(20,25,45,.95);
     padding: 25px;
     border-radius: 18px;
     border: 2px solid #303752;
@@ -118,55 +110,39 @@ select {
     font-weight: bold;
 }
 
-/* SKINS */
-
 .skin-container {
     width: 90%;
     max-width: 1200px;
-    margin: 45px auto;
+    margin: 40px auto;
 }
 
 .skin-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .skin {
     background: #1a2035;
     border: 2px solid #303752;
     border-radius: 18px;
-    overflow: hidden;
+    padding: 20px;
     transition: .2s;
 }
 
 .skin:hover {
-    transform: translateY(-7px);
+    transform: translateY(-6px);
     border-color: #ffd21f;
 }
 
-.skin-image {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 75px;
-    background:
-        linear-gradient(135deg, #28345d, #151a2c);
-}
-
-.skin-info {
-    padding: 17px;
-}
-
-.skin-info h3 {
-    font-size: 21px;
-    margin-bottom: 6px;
+.skin h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .brawler {
     color: #aaa;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .price {
@@ -185,9 +161,9 @@ select {
 }
 
 .owned {
-    margin-top: 13px;
+    margin-top: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 11px;
     border: none;
     border-radius: 9px;
     background: #303750;
@@ -196,15 +172,9 @@ select {
     font-weight: bold;
 }
 
-.owned:hover {
-    background: #414b6c;
-}
-
 .owned.active {
     background: #23a455;
 }
-
-/* ACCOUNT */
 
 .account {
     width: 90%;
@@ -247,16 +217,10 @@ select {
     cursor: pointer;
 }
 
-.tag-input button:hover {
-    background: #ff5147;
-}
-
 #accountResult {
     margin-top: 25px;
     color: #bbb;
 }
-
-/* FOOTER */
 
 footer {
     margin-top: 80px;
@@ -266,10 +230,7 @@ footer {
     color: #777;
 }
 
-/* MOBILE */
-
 @media(max-width:700px) {
-
     header {
         flex-direction: column;
         gap: 15px;
@@ -287,48 +248,25 @@ footer {
     .tag-input {
         flex-direction: column;
     }
-
-    .skin-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
-
-@media(max-width:430px) {
-
-    .skin-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-
-    <div class="logo">
-        🔥 BRAWL HUB
-    </div>
+    <div class="logo">🔥 BRAWL HUB</div>
 
     <nav>
         <a href="#skins">Skinler</a>
         <a href="#hesabim">Hesabım</a>
     </nav>
-
 </header>
 
-
 <section class="hero">
-
     <h1>BRAWL HUB</h1>
-
-    <p>
-        Brawl Stars Skin Kataloğu
-    </p>
-
+    <p>Brawl Stars Türkçe Skin Kataloğu</p>
 </section>
-
 
 <section class="controls">
 
@@ -342,105 +280,38 @@ footer {
     <div class="filters">
 
         <select id="brawlerFilter">
-
-            <option value="all">
-                Tüm Brawlerlar
-            </option>
-
-            <option value="Shelly">
-                Shelly
-            </option>
-
-            <option value="Colt">
-                Colt
-            </option>
-
-            <option value="Spike">
-                Spike
-            </option>
-
-            <option value="Leon">
-                Leon
-            </option>
-
-            <option value="Crow">
-                Crow
-            </option>
-
-            <option value="Mortis">
-                Mortis
-            </option>
-
+            <option value="all">Tüm Brawlerlar</option>
         </select>
-
 
         <select id="rarityFilter">
-
-            <option value="all">
-                Tüm Nadirlikler
-            </option>
-
-            <option value="Başlangıç">
-                Başlangıç
-            </option>
-
-            <option value="Super Rare">
-                Super Rare
-            </option>
-
-            <option value="Epic">
-                Epic
-            </option>
-
-            <option value="Mythic">
-                Mythic
-            </option>
-
-            <option value="Legendary">
-                Legendary
-            </option>
-
+            <option value="all">Tüm Nadirlikler</option>
+            <option value="Rare">Ender</option>
+            <option value="Super Rare">Süper Ender</option>
+            <option value="Epic">Destansı</option>
+            <option value="Mythic">Gizemli</option>
+            <option value="Legendary">Efsanevi</option>
         </select>
 
     </div>
 
-
     <div class="collection">
-
         Koleksiyon:
-
-        <span id="collectionCount">
-            0
-        </span>
-
+        <span id="collectionCount">0</span>
         /
-
-        <span id="totalCount">
-            0
-        </span>
-
+        <span id="totalCount">0</span>
     </div>
 
 </section>
 
-
 <section id="skins" class="skin-container">
-
-    <div
-        id="skinGrid"
-        class="skin-grid"
-    ></div>
-
+    <div id="skinGrid" class="skin-grid"></div>
 </section>
-
 
 <section id="hesabim" class="account">
 
-    <h2>
-        🎮 HESABIM
-    </h2>
+    <h2>🎮 HESABIM</h2>
 
-    <p style="color:#aaa; margin-bottom:20px;">
+    <p style="color:#aaa;margin-bottom:20px;">
         Oyuncu etiketini buraya yaz.
     </p>
 
@@ -463,140 +334,190 @@ footer {
 
 </section>
 
-
 <footer>
-
     © 2026 Brawl Hub
-
 </footer>
-
 
 <script>
 
-/* ================================
-   SKINLER
-================================ */
+/* =========================
+   SKIN VERİLERİ
+========================= */
 
 const skins = [
-
-    {
-        name: "Default Shelly",
-        brawler: "Shelly",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🟣"
-    },
 
     {
         name: "Bandita Shelly",
         brawler: "Shelly",
         price: "149 💎",
-        rarity: "Epic",
-        icon: "🔥"
+        rarity: "Epic"
     },
 
     {
         name: "Star Shelly",
         brawler: "Shelly",
         price: "Özel",
-        rarity: "Legendary",
-        icon: "⭐"
+        rarity: "Legendary"
     },
 
     {
-        name: "Default Colt",
+        name: "Korsan Colt",
         brawler: "Colt",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🔴"
+        price: "29 💎",
+        rarity: "Rare"
     },
 
     {
-        name: "Royal Agent Colt",
+        name: "Ajan Colt",
         brawler: "Colt",
         price: "149 💎",
-        rarity: "Epic",
-        icon: "🕶️"
-    },
-
-    {
-        name: "Default Spike",
-        brawler: "Spike",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🌵"
+        rarity: "Epic"
     },
 
     {
         name: "Sakura Spike",
         brawler: "Spike",
-        price: "149 💎",
-        rarity: "Super Rare",
-        icon: "🌸"
+        price: "79 💎",
+        rarity: "Super Rare"
     },
 
     {
         name: "Robo Spike",
         brawler: "Spike",
         price: "149 💎",
-        rarity: "Epic",
-        icon: "🤖"
+        rarity: "Epic"
     },
 
     {
-        name: "Default Leon",
+        name: "Kurt Adam Leon",
         brawler: "Leon",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🦎"
+        price: "199 💎",
+        rarity: "Mythic"
     },
 
     {
-        name: "Werewolf Leon",
-        brawler: "Leon",
-        price: "149 💎",
-        rarity: "Mythic",
-        icon: "🐺"
-    },
-
-    {
-        name: "Default Crow",
-        brawler: "Crow",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🐦"
-    },
-
-    {
-        name: "Night Mecha Crow",
+        name: "Mecha Crow",
         brawler: "Crow",
         price: "299 💎",
-        rarity: "Legendary",
-        icon: "🤖"
+        rarity: "Legendary"
     },
 
     {
-        name: "Default Mortis",
-        brawler: "Mortis",
-        price: "Ücretsiz",
-        rarity: "Başlangıç",
-        icon: "🦇"
+        name: "Gece Mecha Crow",
+        brawler: "Crow",
+        price: "299 💎",
+        rarity: "Legendary"
     },
 
     {
         name: "Rockabilly Mortis",
         brawler: "Mortis",
         price: "149 💎",
-        rarity: "Epic",
-        icon: "🎸"
+        rarity: "Epic"
+    },
+
+    {
+        name: "Deli Mortis",
+        brawler: "Mortis",
+        price: "79 💎",
+        rarity: "Super Rare"
+    },
+
+    {
+        name: "Ninja Tara",
+        brawler: "Tara",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "Korsan Poco",
+        brawler: "Poco",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "DJ Frank",
+        brawler: "Frank",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "Ejderha Şövalyesi Jessie",
+        brawler: "Jessie",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "Korsan Penny",
+        brawler: "Penny",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "Ay Savaşçısı Lola",
+        brawler: "Lola",
+        price: "199 💎",
+        rarity: "Mythic"
+    },
+
+    {
+        name: "Fırtına Tara",
+        brawler: "Tara",
+        price: "199 💎",
+        rarity: "Mythic"
+    },
+
+    {
+        name: "Cyberpunk Brock",
+        brawler: "Brock",
+        price: "149 💎",
+        rarity: "Epic"
+    },
+
+    {
+        name: "Mecha Bo",
+        brawler: "Bo",
+        price: "299 💎",
+        rarity: "Legendary"
     }
 
 ];
 
 
-/* ================================
+/* =========================
+   BRAWLER FİLTRESİ
+========================= */
+
+const brawlers = [
+    ...new Set(
+        skins.map(skin => skin.brawler)
+    )
+].sort();
+
+const brawlerFilter =
+    document.getElementById("brawlerFilter");
+
+brawlers.forEach(brawler => {
+
+    const option =
+        document.createElement("option");
+
+    option.value = brawler;
+    option.textContent = brawler;
+
+    brawlerFilter.appendChild(option);
+
+});
+
+
+/* =========================
    KOLEKSİYON
-================================ */
+========================= */
 
 let owned = [];
 
@@ -606,51 +527,27 @@ try {
         localStorage.getItem("ownedSkins");
 
     if (saved) {
-
-        const parsed =
-            JSON.parse(saved);
+        const parsed = JSON.parse(saved);
 
         if (Array.isArray(parsed)) {
             owned = parsed;
         }
-
     }
 
-} catch (error) {
-
+} catch {
     owned = [];
-
 }
 
-
-/* ================================
-   KAYDET
-================================ */
 
 function saveOwned() {
 
-    try {
-
-        localStorage.setItem(
-            "ownedSkins",
-            JSON.stringify(owned)
-        );
-
-    } catch (error) {
-
-        console.log(
-            "Koleksiyon kaydedilemedi.",
-            error
-        );
-
-    }
+    localStorage.setItem(
+        "ownedSkins",
+        JSON.stringify(owned)
+    );
 
 }
 
-
-/* ================================
-   SAHİP OLUNAN SKİNİ DEĞİŞTİR
-================================ */
 
 function toggleOwned(name) {
 
@@ -668,43 +565,36 @@ function toggleOwned(name) {
     }
 
     saveOwned();
-
     renderSkins();
 
 }
 
 
-/* ================================
-   SKİNLERİ OLUŞTUR
-================================ */
+/* =========================
+   SKİNLERİ GÖSTER
+========================= */
 
 function renderSkins() {
 
-    const searchElement =
-        document.getElementById("search");
+    const search =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase()
+            .trim();
 
-    const brawlerElement =
-        document.getElementById("brawlerFilter");
+    const selectedBrawler =
+        document
+            .getElementById("brawlerFilter")
+            .value;
 
-    const rarityElement =
-        document.getElementById("rarityFilter");
+    const selectedRarity =
+        document
+            .getElementById("rarityFilter")
+            .value;
 
     const grid =
         document.getElementById("skinGrid");
-
-
-    const search =
-        searchElement.value
-        .toLowerCase()
-        .trim();
-
-
-    const selectedBrawler =
-        brawlerElement.value;
-
-
-    const selectedRarity =
-        rarityElement.value;
 
 
     const filtered =
@@ -712,31 +602,22 @@ function renderSkins() {
 
             const searchMatch =
                 skin.name
-                .toLowerCase()
-                .includes(search)
-
+                    .toLowerCase()
+                    .includes(search)
                 ||
-
                 skin.brawler
-                .toLowerCase()
-                .includes(search);
-
+                    .toLowerCase()
+                    .includes(search);
 
             const brawlerMatch =
                 selectedBrawler === "all"
-
                 ||
-
                 skin.brawler === selectedBrawler;
-
 
             const rarityMatch =
                 selectedRarity === "all"
-
                 ||
-
                 skin.rarity === selectedRarity;
-
 
             return (
                 searchMatch &&
@@ -753,19 +634,14 @@ function renderSkins() {
     if (filtered.length === 0) {
 
         grid.innerHTML = `
-
             <div style="
                 grid-column:1/-1;
                 text-align:center;
                 padding:50px;
                 color:#aaa;
-                font-size:18px;
             ">
-
                 😕 Skin bulunamadı.
-
             </div>
-
         `;
 
     } else {
@@ -775,70 +651,47 @@ function renderSkins() {
             const isOwned =
                 owned.includes(skin.name);
 
-
             const card =
                 document.createElement("div");
 
-
             card.className = "skin";
-
 
             card.innerHTML = `
 
-                <div class="skin-image">
-                    ${skin.icon}
+                <h3>${skin.name}</h3>
+
+                <div class="brawler">
+                    ${skin.brawler}
                 </div>
 
-                <div class="skin-info">
-
-                    <h3>
-                        ${skin.name}
-                    </h3>
-
-                    <div class="brawler">
-                        ${skin.brawler}
-                    </div>
-
-                    <div class="price">
-                        ${skin.price}
-                    </div>
-
-                    <span class="rarity">
-                        ${skin.rarity}
-                    </span>
-
-                    <button class="owned">
-
-                        ${
-                            isOwned
-                            ? "✅ Koleksiyonumda"
-                            : "＋ Koleksiyonuma Ekle"
-                        }
-
-                    </button>
-
+                <div class="price">
+                    ${skin.price}
                 </div>
 
+                <span class="rarity">
+                    ${getTurkishRarity(skin.rarity)}
+                </span>
+
+                <button class="owned ${
+                    isOwned ? "active" : ""
+                }">
+
+                    ${
+                        isOwned
+                        ? "✅ Koleksiyonumda"
+                        : "＋ Koleksiyonuma Ekle"
+                    }
+
+                </button>
             `;
 
 
-            const button =
-                card.querySelector(".owned");
-
-
-            if (isOwned) {
-
-                button.classList.add("active");
-
-            }
-
-
-            button.addEventListener(
-                "click",
-                function() {
-                    toggleOwned(skin.name);
-                }
-            );
+            card
+                .querySelector(".owned")
+                .addEventListener(
+                    "click",
+                    () => toggleOwned(skin.name)
+                );
 
 
             grid.appendChild(card);
@@ -848,21 +701,45 @@ function renderSkins() {
     }
 
 
-    document.getElementById(
-        "collectionCount"
-    ).textContent = owned.length;
+    document
+        .getElementById("collectionCount")
+        .textContent = owned.length;
 
-
-    document.getElementById(
-        "totalCount"
-    ).textContent = skins.length;
+    document
+        .getElementById("totalCount")
+        .textContent = skins.length;
 
 }
 
 
-/* ================================
+function getTurkishRarity(rarity) {
+
+    const names = {
+
+        Rare: "Ender",
+
+        "Super Rare":
+            "Süper Ender",
+
+        Epic:
+            "Destansı",
+
+        Mythic:
+            "Gizemli",
+
+        Legendary:
+            "Efsanevi"
+
+    };
+
+    return names[rarity] || rarity;
+
+}
+
+
+/* =========================
    HESABIM
-================================ */
+========================= */
 
 function showAccount() {
 
@@ -872,12 +749,11 @@ function showAccount() {
     const result =
         document.getElementById("accountResult");
 
-
     let tag =
         input.value.trim();
 
 
-    if (tag === "") {
+    if (!tag) {
 
         result.innerHTML = `
             <p style="color:#ff5959;">
@@ -891,9 +767,7 @@ function showAccount() {
 
 
     if (!tag.startsWith("#")) {
-
         tag = "#" + tag;
-
     }
 
 
@@ -917,8 +791,8 @@ function showAccount() {
             margin-top:15px;
             color:#aaa;
         ">
-            Gerçek hesap bilgileri sonraki
-            API aşamasında bağlanacak.
+            Gerçek hesap bilgileri API bağlantısından
+            sonra gösterilecek.
         </p>
 
     `;
@@ -926,9 +800,9 @@ function showAccount() {
 }
 
 
-/* ================================
-   EVENTS
-================================ */
+/* =========================
+   EVENTLER
+========================= */
 
 document
     .getElementById("search")
@@ -937,14 +811,12 @@ document
         renderSkins
     );
 
-
 document
     .getElementById("brawlerFilter")
     .addEventListener(
         "change",
         renderSkins
     );
-
 
 document
     .getElementById("rarityFilter")
@@ -953,7 +825,6 @@ document
         renderSkins
     );
 
-
 document
     .getElementById("accountButton")
     .addEventListener(
@@ -961,10 +832,6 @@ document
         showAccount
     );
 
-
-/* ================================
-   BAŞLAT
-================================ */
 
 renderSkins();
 
