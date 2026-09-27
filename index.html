@@ -1,43 +1,293 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HINATAA</title>
+<title>Brawl Hub</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: #0b0b0b;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        .container {
-            margin-top: 180px;
-        }
+body {
+    background: #10131f;
+    color: white;
+}
 
-        h1 {
-            font-size: 60px;
-            color: #ff6fae;
-            letter-spacing: 5px;
-        }
+header {
+    background: #171b2d;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ffd21f;
+}
 
-        p {
-            color: #aaa;
-            font-size: 20px;
-        }
-    </style>
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffd21f;
+    text-shadow: 3px 3px #000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd21f;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(circle at center, #39446b 0%, #10131f 65%);
+}
+
+.hero h1 {
+    font-size: 65px;
+    color: #ffd21f;
+    text-shadow: 5px 5px #000;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 21px;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #e83b32;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    border: 3px solid #fff;
+    box-shadow: 0 6px 0 #8d1713;
+    transition: 0.15s;
+}
+
+.button:hover {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #8d1713;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #ffd21f;
+    text-shadow: 3px 3px #000;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #1b2034;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    border: 2px solid #303752;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ffd21f;
+}
+
+.card .icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.stats {
+    background: #171b2d;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    text-align: center;
+}
+
+.stat h2 {
+    color: #ffd21f;
+    font-size: 40px;
+}
+
+.stat p {
+    color: #bbb;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    background: #090b12;
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>HINATAA</h1>
-        <p>Hoş geldin! 🌸</p>
+<header>
+    <div class="logo">🔥 BRAWL HUB</div>
+
+    <nav>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#istatistik">İstatistik</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div>
+        <h1>BRAWL HUB</h1>
+
+        <p>
+            Brawl Stars dünyasına hoş geldin!<br>
+            Hesabını geliştir, kupalarını yükselt.
+        </p>
+
+        <a class="button" href="#hizmetler">
+            HİZMETLERİ GÖR
+        </a>
     </div>
+
+</section>
+
+<section id="hizmetler">
+
+    <h2 class="title">⚡ HİZMETLER</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Kupa Boost</h3>
+            <p>
+                Brawl Stars hesabındaki kupaları
+                yükseltmeye yönelik hizmet.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⭐</div>
+            <h3>Rank Boost</h3>
+            <p>
+                Ranked modunda istediğin seviyeye
+                ulaşmak için destek.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔥</div>
+            <h3>Pro Boost</h3>
+            <p>
+                Daha yüksek seviyelerde oynamak
+                isteyen oyuncular için özel hizmet.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats" id="istatistik">
+
+    <div class="stat">
+        <h2>100+</h2>
+        <p>Oyuncu</p>
+    </div>
+
+    <div class="stat">
+        <h2>500K+</h2>
+        <p>Kupa</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Destek</p>
+    </div>
+
+</section>
+
+<section class="contact" id="iletisim">
+
+    <h2 class="title">📩 İLETİŞİM</h2>
+
+    <p style="color:#bbb; margin-bottom:25px;">
+        Hizmetler hakkında bilgi almak için iletişime geç.
+    </p>
+
+    <a class="button" href="https://discord.com/" target="_blank">
+        DISCORD'A GEL
+    </a>
+
+</section>
+
+<footer>
+    © 2026 Brawl Hub — Brawl Stars Fan Site
+</footer>
 
 </body>
 </html>
