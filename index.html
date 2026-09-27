@@ -3,42 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Brawl Hub</title>
+<title>Brawl Hub - Skin Kataloğu</title>
 
 <style>
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background: #10131f;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #303b70, #111522 60%);
     color: white;
+    min-height: 100vh;
 }
 
+/* HEADER */
+
 header {
-    background: #171b2d;
-    padding: 20px 8%;
+    background: rgba(10, 13, 25, .95);
+    border-bottom: 3px solid #ffd21f;
+    padding: 18px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #ffd21f;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
+    color: #ffd21f;
     font-size: 28px;
     font-weight: 900;
-    color: #ffd21f;
     text-shadow: 3px 3px #000;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 20px;
     font-weight: bold;
 }
 
@@ -46,141 +52,242 @@ nav a:hover {
     color: #ffd21f;
 }
 
+/* HERO */
+
 .hero {
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 50px 20px;
-    background:
-        radial-gradient(circle at center, #39446b 0%, #10131f 65%);
+    padding: 70px 20px 50px;
 }
 
 .hero h1 {
-    font-size: 65px;
+    font-size: 58px;
     color: #ffd21f;
     text-shadow: 5px 5px #000;
-    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 21px;
     color: #ddd;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background: #e83b32;
-    color: white;
-    padding: 16px 35px;
-    border-radius: 12px;
-    text-decoration: none;
     font-size: 19px;
-    font-weight: bold;
-    border: 3px solid #fff;
-    box-shadow: 0 6px 0 #8d1713;
-    transition: 0.15s;
+    margin-top: 15px;
 }
 
-.button:hover {
-    transform: translateY(4px);
-    box-shadow: 0 2px 0 #8d1713;
-}
+/* SEARCH */
 
-section {
-    padding: 70px 8%;
-}
-
-.title {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-    color: #ffd21f;
-    text-shadow: 3px 3px #000;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background: #1b2034;
-    padding: 30px;
+.controls {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    background: rgba(20,25,45,.9);
+    padding: 25px;
     border-radius: 18px;
-    text-align: center;
     border: 2px solid #303752;
-    transition: 0.2s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+.search {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background: #0d101b;
+    color: white;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    background: #292f48;
+    color: white;
+    font-weight: bold;
+}
+
+.collection {
+    margin-top: 18px;
+    color: #ffd21f;
+    font-weight: bold;
+}
+
+/* SKINS */
+
+.skin-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+.skin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 22px;
+}
+
+.skin {
+    background: #1a2035;
+    border: 2px solid #303752;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .2s;
+    position: relative;
+}
+
+.skin:hover {
+    transform: translateY(-7px);
     border-color: #ffd21f;
 }
 
-.card .icon {
-    font-size: 55px;
-    margin-bottom: 15px;
+.skin-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    background:
+        linear-gradient(135deg, #28345d, #151a2c);
 }
 
-.card h3 {
-    font-size: 25px;
+.skin-info {
+    padding: 17px;
+}
+
+.skin-info h3 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.brawler {
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #ffd21f;
+    font-weight: bold;
     margin-bottom: 12px;
 }
 
-.card p {
-    color: #bbb;
-    line-height: 1.5;
+.rarity {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #313956;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.stats {
-    background: #171b2d;
-    display: flex;
-    justify-content: center;
-    gap: 80px;
+.owned {
+    margin-top: 13px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+    background: #303750;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.owned.active {
+    background: #23a455;
+}
+
+/* ACCOUNT */
+
+.account {
+    width: 90%;
+    max-width: 900px;
+    margin: 70px auto;
+    background: rgba(20,25,45,.95);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #303752;
     text-align: center;
 }
 
-.stat h2 {
+.account h2 {
     color: #ffd21f;
-    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.stat p {
+.tag-input {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.tag-input input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.tag-input button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #e83b32;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#accountResult {
+    margin-top: 25px;
     color: #bbb;
 }
 
-.contact {
-    text-align: center;
-}
+/* FOOTER */
 
 footer {
+    margin-top: 80px;
     background: #090b12;
     text-align: center;
     padding: 25px;
     color: #777;
 }
 
-@media (max-width: 800px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
+/* MOBILE */
 
-    .hero h1 {
-        font-size: 42px;
-    }
+@media(max-width:700px) {
 
-    .stats {
+    header {
         flex-direction: column;
-        gap: 35px;
+        gap: 15px;
     }
 
     nav a {
-        margin-left: 10px;
+        margin: 0 7px;
         font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .tag-input {
+        flex-direction: column;
+    }
+
+    .skin-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:430px) {
+
+    .skin-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -189,105 +296,508 @@ footer {
 <body>
 
 <header>
-    <div class="logo">🔥 BRAWL HUB</div>
+
+    <div class="logo">
+        🔥 BRAWL HUB
+    </div>
 
     <nav>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#istatistik">İstatistik</a>
-        <a href="#iletisim">İletişim</a>
+        <a href="#skins">Skinler</a>
+        <a href="#hesabim">Hesabım</a>
     </nav>
+
 </header>
+
 
 <section class="hero">
 
-    <div>
-        <h1>BRAWL HUB</h1>
+    <h1>BRAWL HUB</h1>
 
-        <p>
-            Brawl Stars dünyasına hoş geldin!<br>
-            Hesabını geliştir, kupalarını yükselt.
-        </p>
-
-        <a class="button" href="#hizmetler">
-            HİZMETLERİ GÖR
-        </a>
-    </div>
-
-</section>
-
-<section id="hizmetler">
-
-    <h2 class="title">⚡ HİZMETLER</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🏆</div>
-            <h3>Kupa Boost</h3>
-            <p>
-                Brawl Stars hesabındaki kupaları
-                yükseltmeye yönelik hizmet.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">⭐</div>
-            <h3>Rank Boost</h3>
-            <p>
-                Ranked modunda istediğin seviyeye
-                ulaşmak için destek.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🔥</div>
-            <h3>Pro Boost</h3>
-            <p>
-                Daha yüksek seviyelerde oynamak
-                isteyen oyuncular için özel hizmet.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="stats" id="istatistik">
-
-    <div class="stat">
-        <h2>100+</h2>
-        <p>Oyuncu</p>
-    </div>
-
-    <div class="stat">
-        <h2>500K+</h2>
-        <p>Kupa</p>
-    </div>
-
-    <div class="stat">
-        <h2>24/7</h2>
-        <p>Destek</p>
-    </div>
-
-</section>
-
-<section class="contact" id="iletisim">
-
-    <h2 class="title">📩 İLETİŞİM</h2>
-
-    <p style="color:#bbb; margin-bottom:25px;">
-        Hizmetler hakkında bilgi almak için iletişime geç.
+    <p>
+        Brawl Stars Skin Kataloğu
     </p>
 
-    <a class="button" href="https://discord.com/" target="_blank">
-        DISCORD'A GEL
-    </a>
+</section>
+
+
+<section class="controls">
+
+    <input
+        id="search"
+        class="search"
+        type="text"
+        placeholder="🔎 Skin veya brawler ara..."
+    >
+
+    <div class="filters">
+
+        <select id="brawlerFilter">
+            <option value="all">Tüm Brawlerlar</option>
+            <option value="Shelly">Shelly</option>
+            <option value="Colt">Colt</option>
+            <option value="Spike">Spike</option>
+            <option value="Leon">Leon</option>
+            <option value="Crow">Crow</option>
+            <option value="Mortis">Mortis</option>
+        </select>
+
+        <select id="rarityFilter">
+
+            <option value="all">
+                Tüm Nadirlikler
+            </option>
+
+            <option value="Rare">
+                Rare
+            </option>
+
+            <option value="Super Rare">
+                Super Rare
+            </option>
+
+            <option value="Epic">
+                Epic
+            </option>
+
+            <option value="Mythic">
+                Mythic
+            </option>
+
+            <option value="Legendary">
+                Legendary
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="collection">
+
+        Koleksiyon:
+        <span id="collectionCount">0</span>
+        /
+        <span id="totalCount">0</span>
+
+    </div>
 
 </section>
 
+
+<section id="skins" class="skin-container">
+
+    <div id="skinGrid" class="skin-grid"></div>
+
+</section>
+
+
+<section id="hesabim" class="account">
+
+    <h2>🎮 HESABIM</h2>
+
+    <p style="color:#aaa; margin-bottom:20px;">
+        Oyuncu etiketini buraya yaz.
+    </p>
+
+    <div class="tag-input">
+
+        <input
+            id="playerTag"
+            placeholder="#OYUNCUETİKETİ"
+        >
+
+        <button onclick="showAccount()">
+            GÖSTER
+        </button>
+
+    </div>
+
+    <div id="accountResult">
+        Henüz oyuncu bilgisi girilmedi.
+    </div>
+
+</section>
+
+
 <footer>
-    © 2026 Brawl Hub — Brawl Stars Fan Site
+
+    © 2026 Brawl Hub
+
 </footer>
+
+
+<script>
+
+/*
+=================================
+SKIN VERİLERİ
+=================================
+*/
+
+const skins = [
+
+    {
+        name:"Default Shelly",
+        brawler:"Shelly",
+        price:"Ücretsiz",
+        rarity:"Rare",
+        icon:"🔫"
+    },
+
+    {
+        name:"Bandita Shelly",
+        brawler:"Shelly",
+        price:"149 💎",
+        rarity:"Epic",
+        icon:"🧨"
+    },
+
+    {
+        name:"Star Shelly",
+        brawler:"Shelly",
+        price:"Özel",
+        rarity:"Legendary",
+        icon:"⭐"
+    },
+
+    {
+        name:"Default Colt",
+        brawler:"Colt",
+        price:"Ücretsiz",
+        rarity:"Rare",
+        icon:"🔴"
+    },
+
+    {
+        name:"Royal Agent Colt",
+        brawler:"Colt",
+        price:"149 💎",
+        rarity:"Epic",
+        icon:"🤵"
+    },
+
+    {
+        name:"Default Spike",
+        brawler:"Spike",
+        price:"Ücretsiz",
+        rarity:"Legendary",
+        icon:"🌵"
+    },
+
+    {
+        name:"Sakura Spike",
+        brawler:"Spike",
+        price:"149 💎",
+        rarity:"Epic",
+        icon:"🌸"
+    },
+
+    {
+        name:"Default Leon",
+        brawler:"Leon",
+        price:"Ücretsiz",
+        rarity:"Legendary",
+        icon:"🦎"
+    },
+
+    {
+        name:"Werewolf Leon",
+        brawler:"Leon",
+        price:"149 💎",
+        rarity:"Mythic",
+        icon:"🐺"
+    },
+
+    {
+        name:"Default Crow",
+        brawler:"Crow",
+        price:"Ücretsiz",
+        rarity:"Legendary",
+        icon:"🐦"
+    },
+
+    {
+        name:"Night Mecha Crow",
+        brawler:"Crow",
+        price:"299 💎",
+        rarity:"Legendary",
+        icon:"🤖"
+    },
+
+    {
+        name:"Default Mortis",
+        brawler:"Mortis",
+        price:"Ücretsiz",
+        rarity:"Mythic",
+        icon:"🦇"
+    },
+
+    {
+        name:"Rockabilly Mortis",
+        brawler:"Mortis",
+        price:"149 💎",
+        rarity:"Epic",
+        icon:"🎸"
+    }
+
+];
+
+
+/*
+=================================
+KOLEKSİYON
+=================================
+*/
+
+let owned =
+JSON.parse(localStorage.getItem("ownedSkins")) || [];
+
+
+function saveOwned() {
+
+    localStorage.setItem(
+        "ownedSkins",
+        JSON.stringify(owned)
+    );
+
+}
+
+
+function toggleOwned(name) {
+
+    if (owned.includes(name)) {
+
+        owned = owned.filter(
+            skin => skin !== name
+        );
+
+    } else {
+
+        owned.push(name);
+
+    }
+
+    saveOwned();
+    renderSkins();
+
+}
+
+
+/*
+=================================
+SKINLERİ GÖSTER
+=================================
+*/
+
+function renderSkins() {
+
+    const search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
+    const brawler =
+        document
+        .getElementById("brawlerFilter")
+        .value;
+
+    const rarity =
+        document
+        .getElementById("rarityFilter")
+        .value;
+
+    const grid =
+        document.getElementById("skinGrid");
+
+
+    const filtered =
+        skins.filter(skin => {
+
+            const matchesSearch =
+                skin.name
+                .toLowerCase()
+                .includes(search) ||
+                skin.brawler
+                .toLowerCase()
+                .includes(search);
+
+            const matchesBrawler =
+                brawler === "all" ||
+                skin.brawler === brawler;
+
+            const matchesRarity =
+                rarity === "all" ||
+                skin.rarity === rarity;
+
+            return (
+                matchesSearch &&
+                matchesBrawler &&
+                matchesRarity
+            );
+
+        });
+
+
+    grid.innerHTML = "";
+
+
+    filtered.forEach(skin => {
+
+        const isOwned =
+            owned.includes(skin.name);
+
+
+        const card =
+            document.createElement("div");
+
+        card.className = "skin";
+
+
+        card.innerHTML = `
+
+            <div class="skin-image">
+                ${skin.icon}
+            </div>
+
+            <div class="skin-info">
+
+                <h3>
+                    ${skin.name}
+                </h3>
+
+                <div class="brawler">
+                    ${skin.brawler}
+                </div>
+
+                <div class="price">
+                    ${skin.price}
+                </div>
+
+                <span class="rarity">
+                    ${skin.rarity}
+                </span>
+
+                <button
+                    class="owned ${isOwned ? "active" : ""}"
+                    onclick="toggleOwned('${skin.name}')"
+                >
+
+                    ${isOwned
+                        ? "✅ Koleksiyonumda"
+                        : "＋ Koleksiyonuma Ekle"}
+
+                </button>
+
+            </div>
+
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+
+    document.getElementById(
+        "collectionCount"
+    ).textContent = owned.length;
+
+
+    document.getElementById(
+        "totalCount"
+    ).textContent = skins.length;
+
+}
+
+
+/*
+=================================
+HESAP BÖLÜMÜ
+=================================
+*/
+
+function showAccount() {
+
+    const tag =
+        document
+        .getElementById("playerTag")
+        .value
+        .trim();
+
+    const result =
+        document.getElementById(
+            "accountResult"
+        );
+
+
+    if (!tag) {
+
+        result.innerHTML =
+            "⚠️ Önce oyuncu etiketini yaz.";
+
+        return;
+
+    }
+
+
+    result.innerHTML = `
+
+        <h3 style="color:#ffd21f;">
+            Oyuncu
+        </h3>
+
+        <p style="margin-top:10px;">
+            ${tag}
+        </p>
+
+        <p style="margin-top:15px;">
+            Hesap API bağlantısı sonraki aşamada
+            eklenecek.
+        </p>
+
+    `;
+
+}
+
+
+/*
+=================================
+EVENTLER
+=================================
+*/
+
+document
+.getElementById("search")
+.addEventListener(
+    "input",
+    renderSkins
+);
+
+
+document
+.getElementById("brawlerFilter")
+.addEventListener(
+    "change",
+    renderSkins
+);
+
+
+document
+.getElementById("rarityFilter")
+.addEventListener(
+    "change",
+    renderSkins
+);
+
+
+/*
+=================================
+BAŞLANGIÇ
+=================================
+*/
+
+renderSkins();
+
+</script>
 
 </body>
 </html>
